@@ -1,0 +1,197 @@
+@font-face{
+  font-family: "DM Sans";
+  src: url("../fonts/dm-sans/DMSans-VariableFont_opsz\,wght.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+    font-family: "mono";
+    src: url("../fonts/dm-mono/DMMono-Medium.ttf");
+    font-weight: 500;
+  font-style: normal;
+
+    font-display: swap;
+}
+
+
+@font-face{
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+:root{
+ --Neutral-900: hsl(33, 15%, 15%);
+--Neutral-800: hsl(33, 22%, 20%);
+--Neutral-700: hsl(32, 20%, 29%);
+--Neutral-600: hsl(33, 17%, 41%);
+--Neutral-400: hsl(36, 22%, 86%);
+--Neutral-200: hsl(30, 24%, 93%);
+--Neutral-100: hsl(35, 60%, 96%);
+--Neutral-50: hsl(40, 60%, 98%);
+--Neutral-0: hsl(0, 0%, 100%);
+
+ --sun-500: hsl(42, 83%, 58%);
+  --sun-300: hsl(44, 84%, 75%);
+  --sun-200: hsl(45, 100%, 74%);
+  --sun-50: hsl(41, 100%, 93%);
+
+   --terracotta-700: hsl(15, 69%, 37%);
+  --terracotta-600: hsl(15, 74%, 41%);
+  --terracotta-500: hsl(18, 62%, 47%);
+  --terracotta-400: hsl(22, 72%, 56%);
+
+  --blue-500: hsl(230, 49%, 56%);
+
+   --rose-500: hsl(340, 48%, 52%);
+
+   --fs-base:14px;
+
+}
+
+*{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box ;
+    /* align-items: baseline; */
+}
+li{
+  list-style:none;
+}
+
+body{
+    font-size: var(--fs-base);
+    background-color: var(--Neutral-200);
+    font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial;
+
+
+  
+    min-height: 100vh;
+    margin: 0;
+    }
+.card-hover:hover{
+    background-color: var(--Neutral-0);
+    border: 2px solid;
+    border-color: var(--terracotta-500) !important;
+    
+
+}
+.btn-hover:hover{
+ border: 2px solid;
+    border-color: var(--terracotta-500) !important;
+}
+.card-hover{
+    transition: .3s !important;
+
+}
+.border-top-dott{
+  border-top: 2px dotted lightgray;
+}
+.sidebar{
+  transition: .2s;
+}
+.btn-custom{
+  height: 40px;
+  /* max-width: 50%; */
+}
+.host-card p{
+  color: var(--Neutral-400);
+  opacity: .8;
+  font-family: mono;
+  
+}
+.host-card{
+    background: linear-gradient(225deg, var(--terracotta-400)3% , var(--terracotta-700)100%);
+    transform:skew(-1deg,2deg); 
+    transition: .5s;
+    
+    box-shadow: 0px 10px 30px 3px var(--terracotta-400);
+}
+.receipt-card{
+    transform:skew(1deg,-2deg);
+    box-shadow: 0px 0px 5px 3px lightgray;
+  transition: .5s;
+
+}
+
+
+
+.sun-h{
+  transition: all .7s;
+  transition-timing-function: ease-in-out;
+}
+.card{
+  box-shadow: 0 0 5px 1px lightgray;
+}
+.card-text{
+  color: var(--Neutral-600);
+}
+
+
+@media (min-width:320px) {
+ .w-sm-75{
+  width: 95%;
+ }
+}
+@media (min-width:768px) {
+    .sidebar{
+      width: 35% ;
+      
+    }
+    .h-md-75{
+      height: 100%;
+    }
+    .btn-custom{
+  height: 40px;
+  /* width: 50%; */
+    }
+   
+ 
+      
+}
+
+
+
+@media (min-width:992px) {
+  .sidebar{
+   width: 25%; 
+  }
+    .receipt-card{
+      transform: translateX(-100%) skew(3deg,-3deg); ;
+    }
+    .host-card{
+      transform: translateX(100%) skew(-3deg,3deg);
+    }
+   
+    .card-h:hover  .receipt-card{
+      transform: translateX(-120%) skew(-3deg,3deg); ;
+
+    }
+    .card-h:hover .host-card{
+      transform: translateX(120%) skew(3deg,-3deg);
+
+    }
+    .card-h:hover .sun-h{
+      opacity: 100% !important;     
+
+    }
+    
+    .card{
+      width:32%
+    }
+}
+@media (min-width:1440px) {
+  .sidebar{
+   width: 20%; 
+  }
+   .host-card{
+      width: 35% ;
+      /* height: 100%; */
+    }
+    .receipt-card{
+      width: 35% ;
+    }
+    
+}

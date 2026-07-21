@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Hotel booking confirmation page</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+  <link rel="preload" href="assets/fonts/dm-mono/DMMono-Medium.ttf">
+  <link rel="preload" href="assets/fonts/dm-sans/DMSans-VariableFont_opsz,wght.ttf">
+  <link rel="preload" href="assets/fonts/fraunces/Fraunces-Italic-VariableFont_SOFT,WONK,opsz,wght.ttf">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <nav class="navbar d-md-none border-bottom">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center " href="#">
+        <img src="assets/images/icon-sun.svg " alt="Logo" class="d-inline-block align-text-top">
+        <p class="text-wrap col-6 d-inline-block mb-0" style="font-family:fraunces;"> <i class=""
+            style="color: var(--terracotta-500);">Maison</i> Soleil</p>
+      </a>
+
+      <button class="btn p-1 border d-md-none" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+        <img src="assets/images/icon-menu.svg" alt="">
+      </button>
+
+
+    </div>
+  </nav>
+
+  <div class="d-flex min-vh-100">
+
+    <div class="offcanvas-md  sidebar  offcanvas-end   p-3 border-end  " style="background-color: var(--sun-50); "
+      tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="offcanvas-header p-2 d-flex w-100 justify-content-between border-bottom  ">
+        <img src="assets/images/logo.svg" alt="">
+
+        <button class="btn p-1 d-md-none border" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+          <img src="assets/images/icon-close.svg" alt="">
+        </button>
+      </div>
+      <div class="offcanvas-body h-md-75  w-100 p-2 mt-2 d-flex flex-column " style="color: var(--Neutral-600); ">
+
+        <div class=" rounded-3 w-100 card-hover mb-1" style="background-color: var(--Neutral-0);">
+          <div class="d-flex p-2   justify-content-between">
+            <div>
+              <img src="assets/images/icon-bed.svg" alt="">
+              <span class="fw-bold ms-2">Your stay</span>
+            </div>
+            <span class="badge  rounded-circle text-bg-danger d-flex align-items-center">1</span>
+          </div>
+        </div>
+
+        <div class="rounded-3 w-100  card-hover">
+          <div class="p-2">
+            <div>
+              <img src="assets/images/icon-house.svg" alt="">
+              <span class="fw-bold ms-2">The house</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3 w-100 card-hover">
+          <div class="p-2">
+            <div>
+              <img src="assets/images/icon-pin.svg" alt="">
+              <span class="fw-bold ms-2">Around town</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3 w-100 card-hover">
+          <div class="p-2">
+            <div>
+              <img src="assets/images/icon-breakfast-outline.svg" alt="">
+              <span class="fw-bold ms-2">Breakfast</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-3 w-100 card-hover">
+          <div class=" p-2 ">
+            <div>
+              <img src="assets/images/icon-mail.svg" alt="">
+              <span class="fw-bold ms-2">Messages</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-auto  rounded-4 p-3 w-100 position-relative overflow-hidden"
+          style="background-color: var(--sun-300); ">
+          <p class="mb-0 text-uppercase" style="font-family: mono;">Today in Cassis</p>
+          <p class="text-dark mb-0 fw-bold fs-1" style="font-family: fraunces;"> 27°</p>
+          <p class="mb-0">Sunny · light breeze</p>
+          <div class=" rounded-circle position-absolute  top-0 start-100 translate-middle"
+            style=" width:10rem;height:10rem;"><img src="assets/images/icon-weather.svg" class="w-100 h-100" alt="">
+          </div>
+        </div>
+        <div class="border-top-dott mt-4 w-100 " style="font-family: mono;">
+          <p class=" mt-4">Est. 1987</p>
+          <p>Maison Soleil · 12 Rue des Oliviers · Cassis</p>
+          <p>© 2026 Maison Soleil</p>
+        </div>
+
+      </div>
+    </div>
+
+    <main class="main-content mt-4 container-fluid mx-md-5">
+      <section class="d-flex flex-column flex-lg-row justify-content-between ">
+        <div>
+          <p class="text-uppercase" style="font-family: mono; color:var(--Neutral-600)"> Booking · Confirmed</p>
+          <h1 style="font-family: fraunces; font-size:37px">Bienvenue, <i
+              style="color: var(--terracotta-500);">Lucia.</i></h1>
+        </div>
+        <div class="mt-4 d-flex  justify-content-between  ">
+          <button class="btn   rounded-pill border  border-2 col-5 col-md-6  me-md-3 btn-custom card-hover">Print receipt</button>
+          <button class="btn btn-dark rounded-pill col-6 col-md-7 btn-hover   btn-custom">Add to calendar</button>
+        </div>
+      </section>
+      <section class="mt-5 ">
+        <div class="d-flex flex-column card-h flex-lg-row justify-content-md-center h-lg-500 position-relative  " >
+          <div class="host-card container mx-lg-0 rounded-4 p-4 w-sm-75  position-relative overflow-hidden z-2 d-flex flex-column justify-content-md-between ">
+            <div class="border-top-dott border-1"></div>
+            <p class="mb-0 text-uppercase mt-2">Welcome card</p>
+            <div class="d-flex justify-content-end  ">
+              <img src="assets/images/icon-sun.svg" class="z-2" alt="">
+            </div>
+            <h5 class="mt-2" style="color:var(--sun-300);font-family:fraunces"> A note from your host, </h5>
+            <p class="fs-1  text-light" style="font-family: fraunces;">Margaux.</p>
+            <p style="font-family: DM Sans;"> We're so glad you're coming. The shutters will be open, the lemonade cold,
+              and the cat - Poivre - pretending not to notice you.</p>
+            <p class="mb-0 " style="margin-top: 4rem;">Room</p>
+            <p class="fs-3" style="font-family: fraunces;">La Garrigue</p>
+          </div>
+          <div class="d-none opacity-0 sun-h d-lg-inline-block position-absolute top-50 start-50 translate-middle ">
+
+            <img src="assets/images/icon-sun.svg" style=" width: 150px;"  alt="sun">
+          </div>
+          <div class="receipt-card container mx-lg-0 rounded-4 p-4 mt-3 mt-lg-0 w-sm-75 position-relative overflow-hidden z-1">
+            <div class="d-flex justify-content-between" style="color: var(--Neutral-600);font-family:mono">
+              <ul class="p-0">
+                <li class="text-uppercase">Receipt</li>
+                <li class="fs-2" style="color:black; font-family:DM Sans">Your stay</li>
+              </ul>
+              <ul>
+                <li>№ MS-2026</li>
+                <li class="text-end">0421-AH</li>
+              </ul>
+
+            </div>
+            <div class="border-top-dott"></div>
+            <div class="d-flex justify-content-between mt-4 mb-3" style="color: var(--Neutral-600);">
+              <ul class="text-center p-0">
+                <li>Check in</li>
+                <li class="fs-1" style="font-family: fraunces; color:black">25 Apr</li>
+                <li>Saturday · 15:00</li>
+              </ul>
+              <ul class="text-center">
+                <li>Check out</li>
+                <li class="fs-1" style="font-family: fraunces; color:black">29 Apr</li>
+                <li>Wednesday · 11:00</li>
+              </ul>
+            </div>
+            <div class="border-top-dott"></div>
+            <div class="d-flex justify-content-between mt-4 mb-3" >
+              <ul class=" p-0">
+                <li class="fs-6">Room · La Garrigue · 4 nights</li>
+                <li class="fs-6" >Breakfast · 2 guests</li>
+                <li style="color: var(--Neutral-600);">Tourist tax</li>
+              </ul>
+              <ul class="text-nowrap" style="font-family: mono;">
+                <li>€ 620.00</li>
+                <li >€ 96.00</li>
+                <li style="color: var(--Neutral-600);">€ 14.40</li>
+              </ul>
+            </div>
+           <div class="d-flex justify-content-between  pt-4  border-top  " style="border-color:var(--Neutral-600) !important;">
+              <ul class="p-0 d-flex flex-column  justify-content-between text-uppercase" style="color: var(--Neutral-600); font-family:mono">
+                <li class="mt-2" >Total paid</li>
+                <li class="pt-auto">Paid · Wise · GBP</li>
+              </ul>
+              <ul class="d-flex flex-column justify-content-between">
+                <li class="text-nowrap"  style="font-family: fraunces;font-size:calc(1.375rem + 0.5vw) ">€ 730.40</li>
+                <li class="text-end mt-3"><img src="assets/images/icon-barcode.svg" alt=""></li>
+              </ul>
+           </div>
+          </div>
+        </div>
+        <div class=" mt-2 justify-content-center d-none d-lg-flex align-items-baseline ">
+          <img src="assets/images/icon-sparkle.svg" alt="">
+          <p class="text-uppercase mx-2" style="font-family: mono; color:var(--Neutral-600)">hover to fun</p>
+          <img src="assets/images/icon-sparkle.svg" alt="">
+
+        </div>
+
+      </section>
+      <section class="container-fluid mt-5">
+        <div class="d-flex flex-column flex-lg-row justify-content-between">
+          <div class="card rounded-4 mb-3 mb-lg-0" >
+            <div class="card-body">
+              <div class="d-flex card-head  justify-content-between mb-2" style=" color:var(--terracotta-500)">
+                <div>
+                  <img src="assets/images/icon-key.svg" class="bg-danger  p-2 rounded-3" style="" alt="">  
+                  <span class="card-title text-uppercase mb-0 fs-6 ms-2" style="font-family:mono; " > Arrival</span>
+                </div>
+                <p class="fs-4" style="font-family: fraunces;">01</p>
+              </div>
+
+              <h6 class="card-subtitle mb-2 fs-5 " style="font-family: fraunces;"> Check-in from 15:00</h6>
+              <p style="color:var(--Neutral-600)">Sat, 25 April</p>
+              <p class="card-text">Ring the brass bell by the blue door. If we're at the market, the key is in the terracotta pot by the olive tree.</p>
+            
+            </div>
+          </div>
+             <div class="card rounded-4 mb-3 mb-lg-0">
+            <div class="card-body">
+              <div class="d-flex card-head  justify-content-between mb-2" style=" color:var(--terracotta-500)">
+                <div>
+                  <img src="assets/images/icon-wifi.svg" class="p-2 rounded-3" style="background-color: var(--blue-500);" alt="">  
+                  <span class="card-title text-uppercase mb-0 fs-6 ms-2" style="font-family:mono; " >Wifi</span>
+                </div>
+                <p class="fs-4" style="font-family: fraunces;">02</p>
+              </div>
+
+              <h6 class="card-subtitle mb-2 fs-5 " style="font-family: fraunces;"> Le Soleil · Guest</h6>
+              <p style="color:var(--Neutral-600)">Password below</p>
+              <div class="d-flex  justify-content-between  rounded-3 p-2 mb-2" style="background-color:var(--Neutral-200)">
+                <p class="card-text text-uppercase mb-0" >Network</p>
+                <p class="mb-0">Le Soleil · Guest</p>
+              </div>
+             <div class="d-flex flex-wrap   justify-content-between align-items-baseline  rounded-3 p-1" style="background-color:var(--Neutral-200)">
+                <p class="card-text text-uppercase mb-0 ms-1" >Password</p>
+                <div class="d-flex align-items-baseline">
+                  <p class="mb-0 me-2 text-nowrap">soleil-2026</p>
+                  <button class="btn border rounded-5 card-text p-1 me-1 btn-hover"  id="copyBtn">Copy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+             <div class="card rounded-4 mb-3 mb-lg-0">
+            <div class="card-body">
+              <div class="d-flex card-head  justify-content-between mb-2" style=" color:var(--terracotta-500)">
+                <div>
+                  <img src="assets/images/icon-breakfast.svg" class=" p-2 rounded-3" style="background-color: var(--rose-500);" alt="">  
+                  <span class="card-title text-uppercase mb-0 fs-6 ms-2" style="font-family:mono; " >Breakfast</span>
+                </div>
+                <p class="fs-4" style="font-family: fraunces;">03</p>
+              </div>
+
+              <h6 class="card-subtitle mb-2 fs-5 " style="font-family: fraunces;">Served 8 - 10:30</h6>
+              <p style="color:var(--Neutral-600)">On the terrace</p>
+              <p class="card-text"   >Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note the night before.</p>
+            
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Main content starts -->
+
+
+      <!-- Booking cards start -->
+
+     
+
+      <!-- Guest info row starts -->
+
+      <!-- Arrival -->
+    
+      <!-- Wifi -->
+      
+      <!-- Breakfast -->
+      <!-- Breakfast
+  03
+  Served 8 - 10:30
+  On the terrace
+  Fresh figs, Marseille honey, pain au levain, and espresso. Gluten-free option? Leave a note the night before. -->
+
+      <!-- Guest info row ends -->
+
+      <!-- Main content ends -->
+    </main>
+  </div>
+
+
+
+  <!-- Sidebar starts -->
+
+
+
+  <!-- Guest navigation -->
+
+
+
+  <!-- <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </footer> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/js/all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
